@@ -11,6 +11,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send(" Dairy Management API is Running Successfully! | Welcome to my Dairy");
+});
 app.use("/api", routes);
 
 app.listen(process.env.PORT, () =>
